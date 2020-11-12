@@ -23,7 +23,7 @@ jobs:
       run: |
         git tag 0.4dev$(date +'%y%U')
         # build tar.gz and wheel
-        python setup.py sdist bdist_wheel --build-number $(date +'%Y%m%d%H%M')
+        python setup.py sdist bdist_wheel
 
     - name: Publish to Test PyPI
       uses: pypa/gh-action-pypi-publish@master
