@@ -21,7 +21,7 @@ jobs:
         python -m pip install --user --upgrade setuptools wheel
     - name: Build distribution
       run: |
-        git fetch --depth=1 origin
+        git tag 0.4+$(date +'%y%U')
         # build tar.gz and wheel
         python setup.py sdist bdist_wheel --build-number $(date +'%Y%m%d%H%M')
 
